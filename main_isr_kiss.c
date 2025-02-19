@@ -10,7 +10,6 @@ void btn_callback(void) {
   if (g_cnt >= 8)
     g_cnt = 0;
   g_cnt = 2;
-  int i = 0;
 }
 
 void main(void) {
