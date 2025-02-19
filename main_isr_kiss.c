@@ -2,19 +2,20 @@
 
 volatile int g_cnt = 0;
 char g_str[10];
-
+volatile int apertado = 0;
 // This code creates a progress bar on an OLED screen that
 // increases when the button is pressed.
-void btn_callback(void) { 
+void btn_callback(void) {
+  apertado = 1; 
   if (g_cnt >= 8)
     g_cnt = 0;
-
   g_cnt = 2;
+  int i = 0;
 }
 
 void main(void) {
-  printf("btn pressed \n");
-  g_cnt = 2;
+  if (apertado){
+  printf("btn pressed \n");}
   for (i = 0; i < g_cnt; i++) {
     g_str = 1;
     g_str[i] = '*';
